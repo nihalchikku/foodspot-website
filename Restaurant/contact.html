@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <h1 class="logo">FoodSpot</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="page">
+    <a href="index.html" class="home-btn">Back to Home</a>
+  <h2>Contact Us</h2>
+  <p>📞 +91 9XXXXXXXXX</p>
+  <p>📍 Kerala, India</p>
+
+  <form class="contact-form" onsubmit="sendWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <textarea id="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+<script>
+  function sendWhatsApp(){
+    const name =
+    document.getElementById("name").value;
+    const phone =
+    document.getElementById("phone").value;
+    const message = 
+    document.getElementById("message").value;
+
+    const adminNumber = 
+    "919656721422";
+    const text = `Name: ${name}\nPhone:${phone}\nMessage:${message}`;
+
+    window.open(
+      `https://wa.me/${adminNumber}?text=${encodeURIComponent(text)}`,"_blank"
+    );
+  }
+</script>
+<a href="https://wa.me/919656721422"
+class="whatsapp-float"
+target="_blank">WhatsApp</a>
+</body>
+</html>

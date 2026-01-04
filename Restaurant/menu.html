@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu | FoodSpot</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <script>
+    function orderNow(item) {
+      const phone = "919656721422";
+      const msg= `Hello, I want to order ${item}`;
+
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
+    }
+
+    function filterMenu(type) {
+      const items = 
+      document.querySelectorAll('.menu-item');
+      items.forEach(item => {
+        if(type === 'all') {
+          item.style.display = 'flex';
+        }else if
+          (item.classList.contains(type)) {
+            item.style.display='flex';
+          }else{
+            item.style.display= 'none';
+          }
+      });
+    }
+  </script>
+
+<header>
+  <nav class="navbar">
+    <h1 class="logo">FoodSpot</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="menu-page">
+  <div class="menu-filters">
+    <button onclick="filterMenu('all')">All</button>
+    <button onclick="filterMenu('veg')">Veg</button>
+    <button onclick="filterMenu('nonveg')">Non-Veg</button>
+  </div>
+    <a href="index.html" class="home-btn">Back to Home</a>
+  <h2>Our Menu</h2>
+  <p class="menu-sub">Veg & Non-Veg Specialities</p>
+
+  <div class="menu-category">
+    <h3>Veg</h3>
+    <div class="menu-item veg"
+    onclick="orderNow('Paneer Butter Masala - rs:180')">
+        <span>Paneer Butter Masala</span>
+        <span>Rs:180</span>
+    </div><div class="menu-item veg"
+    onclick="orderNow('Veg Fried Rice - rs:140')">
+        <span>Veg Fried Rice</span>
+        <span>Rs:140</span>
+    </div><div class="menu-item veg"
+    onclick="orderNow('Gobi Manchurian - rs:120')">
+        <span>Gobi Manchurian</span>
+        <span>Rs:120</span>
+    </div>
+  </div>
+  <div class="menu-category">
+    <h3>Non-Veg</h3>
+    <div class="menu-item nonveg"
+    onclick="orderNow('Chicken Biryani - rs:200')">
+        <span>Chicken Biryani</span>
+        <span>Rs:200</span>
+    </div><div class="menu-item nonveg"
+    onclick="orderNow('Chicken 65 - rs:160')">
+        <span>Chicken 65</span>
+        <span>Rs:160</span>
+    </div><div class="menu-item nonveg"
+    onclick="orderNow('Beef Fry - rs:190')">
+        <span>Beef Fry</span>
+        <span>Rs:190</span>
+    </div>
+  </div>
+  <div class="menu-category">
+    <h3>Beverages</h3>
+    <div class="menu-item"
+    onclick="orderNow('Fresh - rs:40')">
+        <span>Fresh Lime</span>
+        <span>Rs:40</span>
+    </div><div class="menu-item"
+    onclick="orderNow('Soft Drinks - rs:50')">
+        <span>Soft Drinks</span>
+        <span>Rs:50</span>
+    </div>
+  </div>
+
+</section>
+<a href="https://wa.me/919656721422"
+class="whatsapp-float"
+target="_blank">WhatsApp</a>
+</body>
+</html>

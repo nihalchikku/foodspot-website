@@ -1,0 +1,167 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Poppins,sans-serif;
+
+}
+body{
+    background: #f8f5f2;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: maroon;
+    color: white;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+
+}
+.hero{
+    text-align: center;
+    padding: 80px 20px;
+    background: #5a1a01;
+    color: white;
+}
+.btn{
+    display: inline-block;
+    margin-top: 20px;
+    background: orange;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+.features{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    padding: 40px;
+
+}
+.card{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+.page{
+    padding: 40px;
+
+}
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+.contact-form button{
+    background: maroon;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+footer{
+    text-align: center;
+    padding: 15px;
+    background: maroon;
+    color: white;
+}
+.home-btn{
+    display: inline-block;
+    margin: 20px 0;
+    padding: 8px 16px;
+    background: maroon;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.home-btn:hover{
+    background: #8b0000;
+}
+.whatsapp-btn{
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+}
+.whatsapp-float{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 22px;
+    padding: 14px 16px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+.food-card img{
+    width: 300px;
+    border-radius: 10px;
+}
+.food-card{
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+.menu-page{
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+.menu-page h2{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+.menu-sub{
+    text-align: center;
+    color: gray;
+    margin-bottom: 30px;
+
+}
+.menu-category{
+    margin-bottom: 30px;
+}
+.menu-category h3{
+    border-bottom: 2px solid maroon;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: maroon;
+}
+.mentu-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+    font-size: 16px;
+}
+.menu-filters {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.menu-filters button{
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    background: maroon;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
